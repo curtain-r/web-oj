@@ -1,0 +1,13 @@
+import React from 'react';
+import Header from '../Header';
+
+export default function Home(props) {
+  return (
+    <>
+      <Header />
+      <div>123</div>
+      {/* <Main />
+      <Footer />  */}
+    </>
+  )
+}
