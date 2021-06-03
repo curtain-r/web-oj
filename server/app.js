@@ -17,9 +17,6 @@ app.use(express.json())
 // 使用中间件处理 cookie
 app.use(cookieParser());
 
-app.use((res, req, next) => {
-  console.log('come~')
-})
 
 // 配置路由
 app.use('/', indexRouter);
@@ -28,5 +25,5 @@ app.use('/users', usersRouter);
 const server = http.createServer(app);
 
 server.listen(PORT, () => {
-  console.log('run at' + PORT)
+  console.log('run at ' + PORT)
 })

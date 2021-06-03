@@ -1,6 +1,6 @@
 const config = {
   DATABASE: {
-    database: 'admin',
+    database: 'shuck_web',
     user: 'root',
     password: '123456',
     options: {
