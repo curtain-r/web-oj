@@ -1,16 +1,22 @@
 import React from 'react';
+import axios from 'axios';
 import { message } from 'antd';
 import ProForm, { ProFormText, ProFormCaptcha } from '@ant-design/pro-form';
 import { MobileOutlined, MailOutlined } from '@ant-design/icons';
 
-const waitTime = (time = 100) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(true);
-    }, time);
-  });
+let code;
+const getCode = (phone) => {
+  axios.post('/api1/code', {
+    data: { phone }
+  }).then(res => { code = res.data.code })
 };
-
+const validation = (e) => {
+  if (+e.captcha === code) {
+    console.log('登录成功')
+  } else {
+    console.log('验证码错误')
+  }
+}
 // eslint-disable-next-line import/no-anonymous-default-export
 const Login = () => {
   return (
@@ -21,10 +27,7 @@ const Login = () => {
       }}
     >
       <ProForm
-        onFinish={async () => {
-          await waitTime(2000);
-          message.success('提交成功');
-        }}
+        onFinish={(e) => { validation(e) }}
         submitter={{
           searchConfig: {
             submitText: '登录',
@@ -98,7 +101,7 @@ const Login = () => {
           ]}
           placeholder="请输入验证码"
           onGetCaptcha={async (phone) => {
-            await waitTime(1000);
+            await getCode(phone);
             message.success(`手机号 ${phone} 验证码发送成功!`);
           }}
         />

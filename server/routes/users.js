@@ -10,14 +10,13 @@ function getUsers(config) {
   db.query("SELECT * FROM users", (err, data) => {
     if (err) console.log(err);
     else {
-      console.log(data);
       resdata = data;
     }
   })
 }
 getUsers(config.DATABASE)
-console.log(resdata)
 router.get('/', (req, res, next) => {
+
   res.send(resdata);
 })
 

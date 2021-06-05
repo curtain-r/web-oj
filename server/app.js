@@ -5,7 +5,8 @@ const cookieParser = require('cookie-parser');
 const PORT = 4000;
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users')
+const usersRouter = require('./routes/users');
+const codeRouter = require('./routes/code')
 
 const app = express();
 // 静态化
@@ -21,6 +22,7 @@ app.use(cookieParser());
 // 配置路由
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/code', codeRouter)
 
 const server = http.createServer(app);
 
