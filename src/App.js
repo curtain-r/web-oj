@@ -9,10 +9,15 @@ import Login from './components/Login';
 import Navigate from './components/Nav';
 import ResizeCodeMirror from './components/ResizeCodeMirror';
 import ReactAce from './components/ReactAce';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import './App.less';
 
 export default function App() {
   return (
-    <>
+    <div className='container'>
+      <Header />
       <Link to='/login'>Login</Link>
       <Link to='/navigate'>Navigate</Link>
       <Link to='/code1'>Code</Link>
@@ -22,7 +27,53 @@ export default function App() {
       <Route path='/navigate' component={Navigate} />
       <Route path='/code1' component={ResizeCodeMirror} />
       <Route path='/code2' component={ReactAce} />
-    </>
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <div>jasdjf</div>
+      <Footer />
+    </div>
   )
 }
 
