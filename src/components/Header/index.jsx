@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <a href='#'>
+        <a href="https://www.baidu.com">
           <h4 className="logo">Brush<sub>web</sub></h4>
         </a>
         <nav>

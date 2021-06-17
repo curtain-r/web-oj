@@ -6,7 +6,8 @@ const PORT = 4000;
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const codeRouter = require('./routes/code')
+const codeRouter = require('./routes/code');
+const quesRouter = require('./routes/ques')
 
 const app = express();
 // 静态化
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/code', codeRouter)
+app.use('/getQues', quesRouter)
 
 const server = http.createServer(app);
 

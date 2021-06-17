@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
-import { Radio, Space } from 'antd';
+import React from 'react';
+// import { Radio, Space } from 'antd';
 
 export default function Question(props) {
-  const { ques, handleAns } = props;
-  function getAns(e) {
-    handleAns(e.target.value);
-  }
+  const { ques } = props;
+  // function getAns(e) {
+  //   handleAns(e.target.value);
+  // }
   return (
     <div className='question'>
-      <div>{ques.title}</div>
+      <div>{ques.content}</div>
       <br></br>
-      <Radio.Group onChange={getAns} >
+      <div>{ques.option}</div>
+      {/* <Radio.Group onChange={getAns} >
         <Space direction="vertical">
-          <Radio value="A">{ques.options[0]}</Radio>
-          <Radio value="B">{ques.options[1]}</Radio>
-          <Radio value="C">{ques.options[2]}</Radio>
-          <Radio value="D">{ques.options[3]}</Radio>
+          <Radio value="A">{ques.option[0]}</Radio>
+          <Radio value="B">{ques.option[1]}</Radio>
+          <Radio value="C">{ques.option[2]}</Radio>
+          <Radio value="D">{ques.option[3]}</Radio>
         </Space>
-      </Radio.Group>
+      </Radio.Group> */}
     </div>
   )
 }

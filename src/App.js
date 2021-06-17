@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+// import axios from 'axios';
 
 // import axios from 'axios';
 // // Comments 不完善
@@ -15,9 +16,10 @@ import './App.less';
 import Main from './components/Main';
 
 export default function App() {
+
   return (
     <div className='container'>
-      <Header />
+      <Header data />
       &nbsp;
       <Main />
 
